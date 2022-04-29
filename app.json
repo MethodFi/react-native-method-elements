@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "react-native-method-elements",
+    "slug": "react-native-method-elements",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "react-native-method-elements"
+}
