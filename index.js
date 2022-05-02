@@ -4,26 +4,23 @@ import { WebView } from 'react-native-webview';
 import { URLSearchParams } from 'react-native-url-polyfill';
 
 export default function RNMethodElements (props) {
-  const { token, env } = props
+  const { token, env } = props;
 
   const handleNavigationStateChange = (event) => {
     if (event.url.startsWith('methodelements://')) {
       const searchParams = new URLSearchParams(`?${event.url.split('?')[1]}`);
       const params = Object.fromEntries(searchParams);
-      const op = searchParams.get('op')
+      const op = searchParams.get('op');
 
-      let response = {...params}
+      let response = {...params};
       if (params.accounts) {
-        response['accounts'] = JSON.parse(params.accounts)
+        response.accounts= JSON.parse(params.accounts);
       }      
 
       switch (op) {
         case 'open': return props.onOpen && props.onOpen(response);
-
         case 'error': return props.onError && props.onError(response);
-
         case 'exit': return props.onExit && props.onExit(response);
-
         case 'success': return props.onSuccess && props.onSuccess(response);
         default:
       }
