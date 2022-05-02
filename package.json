@@ -8,6 +8,7 @@
   },
   "author": "",
   "license": "MIT",
+  "repository": "https://github.com/MethodFi/react-native-method-elements",
   "dependencies": {
     "expo": "~44.0.2",
     "expo-splash-screen": "~0.14.1",

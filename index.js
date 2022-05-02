@@ -12,7 +12,7 @@ export default function RNMethodElements (props) {
       const params = Object.fromEntries(searchParams);
       const op = searchParams.get('op');
 
-      let response = {...params};
+      let response = { ...params };
       if (params.accounts) {
         response.accounts= JSON.parse(params.accounts);
       }      
