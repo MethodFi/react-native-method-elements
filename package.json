@@ -1,18 +1,25 @@
 {
   "name": "react-native-method-elements",
   "version": "1.0.0",
-  "description": "react native NPM package for Method elements",
-  "main": "index.js",
+  "description": "React Native NPM package for Method Elements",
+  "main": "dist/module/index.js",
+  "react-native": "src/index.js",
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "./node_modules/.bin/bob build"
   },
-  "author": "",
+  "keywords": [
+    "react-native",
+    "method",
+    "method-elements"
+  ],
+  "author": "mdelcarmen",
   "license": "MIT",
   "repository": "https://github.com/MethodFi/react-native-method-elements",
   "dependencies": {
-    "expo": "~44.0.2",
-    "expo-splash-screen": "~0.14.1",
-    "expo-status-bar": "~1.2.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
@@ -21,7 +28,11 @@
     "react-native-webview": "^11.18.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "metro-react-native-babel-preset": "^0.70.2"
+    "@react-native-community/bob": "^0.17.1"
+  },
+  "@react-native-community/bob": {
+    "source": "src",
+    "output": "dist",
+    "targets": ["module"]
   }
 }
